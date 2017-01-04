@@ -27,10 +27,10 @@ class HomeController extends Controller
     public function message(Request $request)
     {
         $this->validate($request, [
-            'name'	=>	'required|string|regex:#[А-ЯA-Z][а-яa-z]{2,}\s[А-ЯA-Z][а-яa-z]{2,}#',
+            'name'	=>	'required|string|regex:/[А-ЯA-Z][а-яa-z]{2,}\s[А-ЯA-Z][а-яa-z]{2,}/u',
             'age'   =>	'required|integer|between:17,65',
             'date'  =>  'required|date|after:'.date('Y-m-d'),
-            'file' => 'required|mimes:doc,docx'
+            'file' => 'mimes:doc,docx'
         ]);
 
 
@@ -44,7 +44,7 @@ class HomeController extends Controller
 
         if ($request->hasFile('file'))
         {
-            $path =  base_path() .'/files/'.date('Y').'/'.date('m').'/';
+            $path =  base_path() .'/files/';
             $file_name = $feedback->id.'.'.$request->file('file')->getClientOriginalExtension();
 
             $request->file('file')->move($path,$file_name);
