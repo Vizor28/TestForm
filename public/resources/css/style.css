@@ -1,0 +1,34 @@
+*{
+	outline: none;
+}
+
+.animated {
+   -webkit-animation-fill-mode: none; 
+     animation-fill-mode: none; 
+}
+.navbar-toggle{
+	border-color: #88c9d6;
+}
+.icon-bar{
+	background: #88c9d6;
+}
+.navbar-brand{
+	color:#88c9d6;	
+}
+body{
+	background:#ffffff;
+}
+body.fix{
+	min-width:1000px;
+}
+.mTop10{ margin-top:10px; }
+.mTop15{ margin-top:15px; }
+.mTop20{ margin-top:20px; }
+.mTop30{ margin-top:30px; }
+.mTop40{ margin-top:40px; }
+.mTop50{ margin-top:50px; }
+.mTop60{ margin-top:60px; }
+.mTop70{ margin-top:70px; }
+.mTop80{ margin-top:80px; }
+.mTop90{ margin-top:90px; }
+.mTop100{margin-top:100px;}
